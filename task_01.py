@@ -4,7 +4,7 @@ import json
 
 def f(x):
     try:
-        return 100 * math.sqrt(1 - 0.01 * x ** 2) + 0.01 * x + 10
+        return 100 * math.sqrt(abs(1 - 0.01 * x**2)) + 0.01 * (abs(x + 10))
     except ValueError:
         return float('nan')
 
@@ -45,7 +45,7 @@ x_values = [point["x"] for point in data]
 y_values = [point["y"] for point in data]
 
 plt.figure(figsize=(10, 6))
-plt.plot(x_values, y_values, label='f(x) = 100√(1-0.01x²) + 0.01x + 10')
+plt.plot(x_values, y_values, label='f(x) = 100√|1-0.01x²| + 0.01|x + 10|')
 plt.title('График функции')
 plt.xlabel('x')
 plt.ylabel('f(x)')
