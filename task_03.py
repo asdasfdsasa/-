@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def f(x1, x2, m=10):
-    return -(np.sin(x1) * (np.sin(x1**2 / np.pi)**(2*m)) + np.sin(x2) * (np.sin(x2**2 / np.pi)**(2*m)))
+    return -(np.sin(x1) * (np.sin(1 * x1**2 / np.pi)**(2*m)) + np.sin(x2) * (np.sin(2 * x2**2 / np.pi)**(2*m)))
 
 x1_min, x1_max = 0.0, np.pi
 x2_min, x2_max = 0.0, np.pi
