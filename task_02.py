@@ -1,8 +1,7 @@
-import argparse
+iimport argparse
 import json
 import matplotlib.pyplot as plt
 import sys
-import os
 
 def main():
     parser = argparse.ArgumentParser(description='Построение графика')
